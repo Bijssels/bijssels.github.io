@@ -1,0 +1,229 @@
+html {
+  font-size: 16px;
+}
+
+/* Lichte laptops of kleine desktops */
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Tablets in landscape of kleinere laptops */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Tablets in portrait of grote phones */
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Grote smartphones */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Medium smartphones */
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+/* Kleine smartphones */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/* Ultra kleine schermen / oudere devices */
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  line-height: 1.6;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16.25rem; /* 260px */
+  height: 100%;
+  background-color: #34495e;
+  border-right: 0.0625rem solid #2c3e50; /* 1px */
+  padding-top: 1.25rem; /* 20px */
+  z-index: 1000;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.sidebar ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  display: block;
+  transition: background 0.2s, color 0.2s;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sidebar ul li a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.app-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 1.2rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  color: #ecf0f1;
+}
+
+.content {
+  padding: 2rem;
+  width: 90vw; /* Verander max-width naar percentage */
+  max-width: 62.5rem; /* Laat nog steeds de limiet voor grote schermen */
+  background-color: #34495e;
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1); /* 5px 20px */
+  margin: 2rem auto;
+  left: 50%;
+}
+
+
+h1, h2, h3 {
+  color: #ecf0f1;
+}
+
+h1 {
+  border-bottom: 0.125rem solid #2c3e50; /* 2px */
+  padding-bottom: 0.3em;
+}
+
+code {
+  background-color: #2c3e50;
+  padding: 0.125rem 0.375rem; /* 2px 6px */
+  border-radius: 0.25rem; /* 4px */
+  font-family: 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  padding: 1em;
+  border-radius: 0.625rem; /* 10px */
+  overflow-x: auto;
+  color: #ecf0f1;
+}
+
+details {
+  background-color: #2c3e50;
+  border: 0.0625rem solid #1abc9c; /* 1px */
+  border-radius: 0.625rem; /* 10px */
+  padding: 0.8rem 1rem;
+  margin: 1.2rem 0;
+  transition: all 0.3s ease;
+}
+
+details[open] {
+  box-shadow: 0 0 0.75rem #1abc9c55; /* 12px */
+}
+
+summary {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  list-style: none;
+  color: #1abc9c;
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.2s ease;
+  color: #1abc9c;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hyper {
+  color: #fff;
+  font-style: italic;
+}
+
+.hyper:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+input {
+  width: 100%;
+  border-radius: 0.75rem; /* 12px */
+  color: #fff;
+  background-color: #2c3e50;
+}

@@ -239,3 +239,93 @@
     <item><img src="assets/stick.png" alt=""> Stick</item>
     <item></item>
 </grid3>
+
+## BattleAxes
+### Copper
+<grid3>
+    <item><img src="assets/copper_ingot.png" alt=""> Copper Ingot</item>
+    <item><img src="assets/copper_ingot.png" alt=""> Copper Ingot</item>
+    <item><img src="assets/copper_ingot.png" alt=""> Copper Ingot</item>
+    <item><img src="assets/copper_ingot.png" alt=""> Copper Ingot</item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item><img src="assets/copper_ingot.png" alt=""> Copper Ingot</item>
+    <item></item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item></item>
+</grid3>
+
+<lb></lb>
+
+### Iron
+<grid3>
+    <item><img src="assets/iron_ingot.png" alt=""> Iron Ingot</item>
+    <item><img src="assets/iron_ingot.png" alt=""> Iron Ingot</item>
+    <item><img src="assets/iron_ingot.png" alt=""> Iron Ingot</item>
+    <item><img src="assets/iron_ingot.png" alt=""> Iron Ingot</item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item><img src="assets/iron_ingot.png" alt=""> Iron Ingot</item>
+    <item></item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item></item>
+</grid3>
+
+<lb></lb>
+
+### Gold
+<grid3>
+    <item><img src="assets/gold_ingot.png" alt=""> Gold Ingot</item>
+    <item><img src="assets/gold_ingot.png" alt=""> Gold Ingot</item>
+    <item><img src="assets/gold_ingot.png" alt=""> Gold Ingot</item>
+    <item><img src="assets/gold_ingot.png" alt=""> Gold Ingot</item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item><img src="assets/gold_ingot.png" alt=""> Gold Ingot</item>
+    <item></item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item></item>
+</grid3>
+
+<lb></lb>
+
+### Diamond
+<grid3>
+    <item><img src="assets/diamond.png" alt=""> Diamond</item>
+    <item><img src="assets/diamond.png" alt=""> Diamond</item>
+    <item><img src="assets/diamond.png" alt=""> Diamond</item>
+    <item><img src="assets/diamond.png" alt=""> Diamond</item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item><img src="assets/diamond.png" alt=""> Diamond</item>
+    <item></item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item></item>
+</grid3>
+
+<lb></lb>
+
+### Netherite
+<grid3>
+    <item><img src="assets/netherite_ingot.png" alt=""> Netherite Ingot</item>
+    <item><img src="assets/netherite_ingot.png" alt=""> Netherite Ingot</item>
+    <item><img src="assets/netherite_ingot.png" alt=""> Netherite Ingot</item>
+    <item><img src="assets/netherite_ingot.png" alt=""> Netherite Ingot</item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item><img src="assets/netherite_ingot.png" alt=""> Netherite Ingot</item>
+    <item></item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item></item>
+</grid3>
+
+<lb></lb>
+
+### Enderite
+only different enderite tool
+<grid3>
+    <item><img src="assets/enderite_scrap.png" alt=""> Enderite Scrap</item>
+    <item><img src="assets/netherite_ingot.png" alt=""> Netherite Ingot</item>
+    <item><img src="assets/enderite_scrap.png" alt=""> Enderite Scrap</item>
+    <item><img src="assets/netherite_ingot.png" alt=""> Netherite Ingot</item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item><img src="assets/netherite_ingot.png" alt=""> Netherite Ingot</item>
+    <item></item>
+    <item><img src="assets/stick.png" alt=""> Stick</item>
+    <item></item>
+</grid3>

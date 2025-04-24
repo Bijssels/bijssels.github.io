@@ -1,4 +1,4 @@
-Welcome to the official Bpack documentation
+Welcome to the official Vanilla Rebooted documentation
 
 Links:
 

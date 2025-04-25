@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vanilla Rebooted</title>
+  <meta name="description" content="Bpack wiki">
+  <link rel="stylesheet" href="assets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="app">Loading...</div>
+    <link rel="stylesheet" href="assets/docsify/items.css">
+
+    <nav id="navbar">
+      
+    </nav>
+
+    <script>
+      window.$docsify = {
+        name: 'Vanilla Rebooted',
+        repo: '',
+        basePath: '/pages',
+        alias: {
+          '/items': '#/items/README',
+          '/mobs': '#/mobs/README',
+          '/enchantments': '#/enchantments/README',
+          '/enchantments/papers': '/#/enchantments/papers/README',
+          '/enchantments/books': '/#/enchantments/books/README',
+        },
+        search: {
+          maxAge: 86400000,
+          auto: true,
+          paths: [
+            '',
+            '/end.md',
+            '/overworld.md',
+            '/recipies.md',
+            '/items/README.md',
+            '/mobs/README.md',
+            '/enchantments/README.md',
+            '/enchantments/papers/README.md',
+            '/enchantments/books/README.md',
+          ],
+          placeholder: 'Search...',
+          noData: 'No Results',
+          depth: 50
+        },
+        link: {
+          keywords: {
+            "end": "#/end",
+            "overworld": "#/overworld",
+            "recipies": "#/recipies",
+            "enderite": "#/items/enderite"
+          },
+          ignoredparents: ["item"],
+          skipifonpage: true
+        }
+      }
+    </script>
+
+    <script>
+        console.log("SITE STIL IN DEVELOPEMENT")
+    </script>
+
+    <script src="assets/docsify/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <script src="assets/docsify/autoTextToHyperLink.js"></script>
+    <script src="assets/docsify/navbar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+/* Algemene body-styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  line-height: 1.6;
+  padding-top: 50px; /* Voor de navbar */
+}
+
+/* Basis styling voor de navbar */
+#navbar {
+  background-color: #34495e;
+  padding: 5px 5px;  /* Verkleind de navbar hoogte */
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #2c3e50;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Zorgt ervoor dat de navbar altijd boven andere elementen staat */
+  height: 25px; /* Verklein de hoogte van de navbar */
+}
+
+#navbar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem; /* Verklein de tekstgrootte */
+}
+
+#navbar a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+/* Dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 25px;
+  background-color: #34495e;
+  min-width: 50px;
+  z-index: 1;
+  border: 1px solid #2c3e50;
+  border-radius: 5px;
+  width: max-content;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  color: #ecf0f1;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.dropdown-content a:active, .dropdown-content a:hover {
+  background-color: #16a085;
+}
+
+#navbar .dropdown {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+#navbar .dropdown a {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Zorg ervoor dat de dropdown goed past bij de andere elementen */
+@media screen and (max-width: 768px) {
+  #navbar {
+      flex-direction: row;
+      align-items: center;
+  }
+
+  #navbar a {
+      padding: 10px;
+  }
+
+  .dropdown-content {
+      min-width: 100%; /* Breidt de dropdown in mobiele weergave uit */
+  }
+}
+
+/* Sidebar styling */
+.sidebar {
+  position: fixed;
+  top: 35px; /* De sidebar begint 50px onder de navbar */
+  left: 0;
+  width: 16.25rem; /* 260px */
+  height: calc(100% - 50px); /* Sidebar neemt de volledige hoogte van het scherm, minus de navbar */
+  background-color: #34495e;
+  border-right: 0.0625rem solid #2c3e50; /* 1px */
+  z-index: 1000;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar ul {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.sidebar ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem; /* 10px 20px */
+  display: block;
+  transition: background 0.2s, color 0.2s;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.sidebar ul li a:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.app-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-left: 1.2rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  color: #ecf0f1;
+}
+
+/* Content styling */
+.content {
+  padding: 2rem;
+  max-width: 60%; /* Laat nog steeds de limiet voor grote schermen */
+  background-color: #34495e;
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 0.3125rem 1.25rem rgba(0, 0, 0, 0.1); /* 5px 20px */
+  margin: 2rem auto;
+  margin-left: 25%;
+}
+
+/* Overige styling voor kopteksten, code en details */
+h1, h2, h3 {
+  color: #ecf0f1;
+}
+
+h1 {
+  border-bottom: 0.125rem solid #2c3e50; /* 2px */
+  padding-bottom: 0.3em;
+}
+
+code {
+  background-color: #2c3e50;
+  padding: 0.125rem 0.375rem; /* 2px 6px */
+  border-radius: 0.25rem; /* 4px */
+  font-family: 'Courier New', monospace;
+}
+
+pre {
+  background-color: #2c3e50;
+  padding: 1em;
+  border-radius: 0.625rem; /* 10px */
+  overflow-x: auto;
+  color: #ecf0f1;
+}
+
+details {
+  background-color: #2c3e50;
+  border: 0.0625rem solid #1abc9c; /* 1px */
+  border-radius: 0.625rem; /* 10px */
+  padding: 0.8rem 1rem;
+  margin: 1.2rem 0;
+  transition: all 0.3s ease;
+}
+
+details[open] {
+  box-shadow: 0 0 0.75rem #1abc9c55; /* 12px */
+}
+
+summary {
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  list-style: none;
+  color: #1abc9c;
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: transform 0.2s ease;
+  color: #1abc9c;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hyper {
+  color: #fff;
+  font-style: italic;
+}
+
+.hyper:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive styling voor kleinere schermen */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+input {
+  width: 100%;
+  border-radius: 0.75rem; /* 12px */
+  color: #fff;
+  background-color: #2c3e50;
+}

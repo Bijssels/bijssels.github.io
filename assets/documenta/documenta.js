@@ -22,21 +22,23 @@ function getRoute() {
   }
 
   const hashContent = hash.slice(2);
-  const [route, querystring = ''] = hashContent.split('?');
+  [route, querystring = ''] = hashContent.split('?');
   return [route, querystring];
 }
 
 function getParams() {
-  if (!querystring) { return {} }
-  let querystrings = querystring.split('&');
+  if (!querystring) return {};
+
   const queryParams = {};
+  const querystrings = querystring.split('&');
 
   querystrings.forEach(param => {
-    const [key, value] = param.split('=');
-    queryParams[key] = value;
+    const [key, ...rest] = param.split('=');
+    const value = rest.join('=');
+    queryParams[decodeURIComponent(key)] = decodeURIComponent(value || '');
   });
 
-  return queryParams
+  return queryParams;
 }
 
 function loadPage(route, querystring) {
@@ -101,65 +103,66 @@ async function renderPage(content, querystring) {
 
   container.innerHTML = modifiedContent
 
-  const id = getParams().id;
-  if (id) {
-    const element = document.getElementById(id);
-
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.log(`Element with id ${id} not found`);
-    }
-  }
-
-  let sidebar = document.createElement('aside');
+  const sidebar = document.createElement('aside');
   sidebar.classList.add("sidebar");
+  sidebar.classList.add("app-name");
   app.appendChild(sidebar);
 
-  let appname = document.createElement('h1');
-  sidebar.classList.add("app-name");
-  let appnamelink = document.createElement('a');
-  appnamelink.classList.add("app-name-link")
-  appnamelink.href = "/"
-  appnamelink.text = window.$documenta.name
-  sidebar.appendChild(appname)
-  appname.appendChild(appnamelink)
+  const appname = document.createElement('h1');
+  const appnamelink = document.createElement('a');
+  appnamelink.classList.add("app-name-link");
+  appnamelink.href = "/";
+  appnamelink.textContent = window.$documenta.name;
 
-  let sidebarlu = document.createElement('ul');
-  sidebar.appendChild(sidebarlu);
+  appname.appendChild(appnamelink);
+  sidebar.appendChild(appname);
+
+  const sidebarList = document.createElement('ul');
+  sidebar.appendChild(sidebarList);
 
   function createSidebarFromHeaders() {
-    let contentDiv = document.querySelector('.content');
-    if (!contentDiv) {
-      return;
-    }
+    const content = document.querySelector('.content');
+    if (!content) return;
 
-    function createListForHeader(headerLevel, parentList) {
-      let headers = contentDiv.querySelectorAll(`h${headerLevel}`);
+    const headers = [...content.querySelectorAll('h1, h2, h3, h4, h5, h6')];
+    const stack = [{ level: 0, list: sidebarList }];
 
-      headers.forEach(header => {
+    headers.forEach(header => {
+      const level = parseInt(header.tagName.substring(1));
 
-        let sidebarli = document.createElement('li');
-        parentList.appendChild(sidebarli);
+      if (!header.id) {
+        header.id = header.textContent.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
+      }
 
-        let sidebara = document.createElement('a');
-        sidebara.classList.add("section-link");
-        sidebara.href = `${window.location}?id=${header.id}`;
-        sidebara.textContent = header.textContent;
-        sidebarli.appendChild(sidebara);
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.classList.add("section-link");
+      a.href = `${window.location.href.split('?')[0]}?id=${header.id}`;
+      a.textContent = header.textContent;
+      li.appendChild(a);
 
-        if (headerLevel < 6) {
-          let nextList = document.createElement('ul');
-          sidebarli.appendChild(nextList);
-          createListForHeader(headerLevel + 1, nextList);
-        }
-      });
-    }
+      while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+        stack.pop();
+      }
 
-    createListForHeader(1, sidebarlu);
+      const parentList = stack[stack.length - 1].list;
+      parentList.appendChild(li);
+
+      const newSublist = document.createElement('ul');
+      li.appendChild(newSublist);
+      stack.push({ level, list: newSublist });
+    });
   }
 
   createSidebarFromHeaders();
+
+  
+  const id = getParams().id;
+  const scrollto = id.toLowerCase()
+  const element = document.getElementById(scrollto);
+  element.scrollIntoView({ 
+    behavior: 'smooth'
+  });
 }
 
 function renderError() {

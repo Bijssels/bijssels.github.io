@@ -1,0 +1,2 @@
+# lightness
+- makes attacks faster

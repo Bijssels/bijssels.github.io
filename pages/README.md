@@ -15,6 +15,7 @@ Welcome to the *official* _Vanilla Rebooted_ documentation
 
 ## Download
 - [modrinth](https://modrinth.com/datapack/vanilla-rebooted)
+- [discord](https://discord.gg/wd6fttQWF2)
 
 <lb></lb>
 

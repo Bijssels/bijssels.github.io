@@ -1,7 +1,7 @@
 # home
 Welcome to the *official* _Vanilla Rebooted_ documentation
 
-## Links
+## Pages
 
 - [Home](/)
 - [End](end)
@@ -13,7 +13,7 @@ Welcome to the *official* _Vanilla Rebooted_ documentation
 
 <lb></lb>
 
-## Download
+## Links
 - [modrinth](https://modrinth.com/datapack/vanilla-rebooted)
 - [discord](https://discord.gg/wd6fttQWF2)
 

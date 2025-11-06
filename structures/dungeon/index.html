@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DUNGEON | Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <h1>Dungeon</h1>
+    <div class="box-content">
+        <h2>Summary:</h2>
+        <p>Big stucture mostly constisting out of hallways where you can get <a href="/weapons/scythe/"> the Scythe</a></p>
+        <br>
+
+        <h2>Generation:</h2>
+        <p>It spawns in sircles like the stronghold.</p>
+        <p>More chance in ocean, 4 possible per ring, 16 chunks between rings, 64 per world</p>
+
+        <h3>hallways:</h3>
+        <p>It has lots of hallwayparts that are all 3 blocks long that will get generated behind eachother with a random lenght before it places a split</p>
+        <h3>rooms:</h3>
+        <p>It has a few rooms that can generate inside hallways or as ending of hallways</p>
+        <p>Most of the rooms have <a href="/mobs/bubble/"> Bubble </a> spawners</p>
+        <p>Only place where you can get <a href="/weapons/scythe/"> sctyhe </a> related enchantment</p>
+
+        <h2>Loot:</h2>
+        <p>WILL BE PUT HERE LATER (if i dont forget)</p>
+
+
+
+    </div>
+  </div>
+</body>
+</html>

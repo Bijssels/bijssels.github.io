@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOMENTUM MACE | Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <script>
+      document.addEventListener('copy', function(e) {
+          const selectedText = window.getSelection().toString();
+
+          if (selectedText === 'Momentum Mace') {
+              e.preventDefault();
+              e.clipboardData.setData('text/plain', 'Mommy Mace');
+          }
+      });
+    </script>
+    <h1>Momentum Mace</h1>
+    <div class="box-content">
+        <h2>Summary:</h2>
+        <p>Mace but faster = more damage</p>
+        <br>
+        <h2>Crafting:</h2>
+        <p>You need the folloing ingredients:</p>
+        <ul>
+          <li>1 Heavy Core</li>
+          <li>1 Blaze Rod</li>
+        </ul>
+
+        <div class="crafting-grid">
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/heavy core.png"></span>
+            <span class="text">heavy core</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/blaze rod.png"></span>
+            <span class="text">blaze rod</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+        </div>
+
+
+        <h2>Enchantments:</h2>
+        <p>There are a few enchantments that can be put on the momentum mace</p>
+        <ul>
+          <li><a href="/enchantments/eaw/wind-throw/"> Wind Throw</a></li>
+          <li><a href="/enchantments/eaw/impulse/"> Impulse</a></li>
+          <li><a href="/enchantments/eaw/range/"> Range</a></li>
+        </ul>
+
+
+
+    </div>
+  </div>
+</body>
+</html>

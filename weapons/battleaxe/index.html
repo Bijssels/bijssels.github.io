@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BATTLEAXE | Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <h1>Battleaxe</h1>
+    <div class="box-content">
+        <h2>Summary:</h2>
+        <p>A battleaxe is just a axe but with no knockback lots of damage but a slow reload time</p>
+        <br>
+        <h2>Crafting:</h2>
+        <p>Item is upgradable to netherite</p>
+        <p>You need the folloing ingredients:</p>
+        <ul>
+          <li>5 Same Material [gold/iron/copper/diamond]</li>
+          <li>2 Sticks</li>
+        </ul>
+
+        <div class="crafting-grid">
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/diamond.png"></span>
+            <span class="text">material</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/diamond.png"></span>
+            <span class="text">material</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/diamond.png"></span>
+            <span class="text">material</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/diamond.png"></span>
+            <span class="text">material</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/stick.png"></span>
+            <span class="text">stick</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/diamond.png"></span>
+            <span class="text">material</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/stick.png"></span>
+            <span class="text">stick</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+        </div>
+
+
+        <h2>Enchantments:</h2>
+        <p>All axe enchantments work on the battleaxe</p>
+
+
+
+    </div>
+  </div>
+</body>
+</html>

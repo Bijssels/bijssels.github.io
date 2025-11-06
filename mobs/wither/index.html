@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WITHER | Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <h1>Wither</h1>
+    <div class="box-content">
+        <h2>Summary:</h2>
+        <p>Wither got made harder with more health and more attacks</p>
+        <p>Health: 600HP (300 hearts)</p>
+        <br>
+
+        <h2>Phases:</h2>
+        <p>there are multible phases adding more attacks / having specific mecanics</p>
+        <ul>
+          <li>Normal:</li>
+          <li class="explanation">everything above 75% health</li>
+          <li>Special:</li>
+          <li class="explanation">everything between 50% health and 75% health</li>
+          <li>Half:</li>
+          <li class="explanation">everything between 30% health and 50% health</li>
+          <li>Mad:</li>
+          <li class="explanation">everything between 25% health and 30% health</li>
+          <li>Weak:</li>
+          <li class="explanation">everything below 25% health</li>
+          <li>Final:</li>
+          <li class="explanation">everything below 100HP (50 hearts)</li>
+        </ul>
+
+        <h2>Attacks:</h2>
+        <p>there are multible attacks</p>
+        <ul>
+          <li>Normal:</li>
+          <li class="explanation">every normal wither attack</li>
+          <li class="explanation">always happenes</li>
+          <li>Wither Skeleton Spawn:</li>
+          <li class="explanation">spawns 4 wither skeletons</li>
+          <li class="explanation">happanes after Speical phase</li>
+          <li>Explode:</li>
+          <li class="explanation">makes explotion in front of it</li>
+          <li class="explanation">happanes after Speical phase</li>
+          <li>Dash:</li>
+          <li class="explanation">dashes forwards destroying everything in its path</li>
+          <li class="explanation">happanes after Half phase</li>
+        </ul>
+
+        <h2>Mecanics:</h2>
+        <p>there are multible mecanics</p>
+        <ul>
+          <li>Normal:</li>
+          <li class="explanation">just normal wither</li>
+          <li class="explanation">always happenes</li>
+          <li>Spawn:</li>
+          <li class="explanation">makes lots of explotions</li>
+          <li class="explanation">happenes when spawning</li>
+          <li>Mad:</li>
+          <li class="explanation">100% chance on custom attack</li>
+          <li class="explanation">happenes when in Mad phase</li>
+          <li>Final:</li>
+          <li class="explanation">moves away from clostes player</li>
+          <li class="explanation">dashes more</li>
+          <li class="explanation">happenes when in Final phase</li>
+        </ul>
+
+    </div>
+  </div>
+</body>
+</html>

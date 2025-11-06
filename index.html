@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <h1>Enchantments & Weapons</h1>
+    <div class="box-content">
+        <p>E&W is a cool datapack that adds multiple new weapons and enchantments</p>
+        <p>This datapack also adds more features for pvp and changes some vanilla enchantments</p>
+        
+        <br>
+
+        <p>Pages: </p>
+        <ul>
+          <li><a href="/weapons">Weapons</a></li>
+          <li><a href="/structures">Structures</a></li>
+          <li><a href="/mobs">Mobs</a></li>
+          <li><a href="/enchantments">Enchantments</a></li>
+        </ul>
+
+        <p>Downloads: </p>
+        <ul>
+          <li><a href="https://modrinth.com/project/enchantments-and-weapons">Modrinth</a></li>
+        </ul>
+
+        <p>Credits:</p>
+        <ul>
+          <li>Bijssels</li>
+          <li class="explanation">Owner</li>
+          <li>Szimione</li>
+          <li class="explanation">Tips/Playtest/Builder</li>
+          <li>OxiMalakas</li>
+          <li class="explanation">Textures/Playtest/Tips/Builder</li>
+          <li>Rio3505</li>
+          <li class="explanation">Builder</li>
+        </ul>
+
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCYTE | Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <h1>Scythe</h1>
+    <div class="box-content">
+        <h2>Summary:</h2>
+        <p>This is the scythe its a very overpowered weapon you can find in <a href="/structures/dungeon/"> the Dungeon</a></p>
+        <br>
+        <h2>Crafting:</h2>
+        <p>You need the folloing ingredients:</p>
+        <ul>
+          <li>2 Bubble Rod (MAKE CLICKABLE)</li>
+          <li>3 Purpium (MAKE CLICKABLE)</li>
+        </ul>
+
+        <div class="crafting-grid">
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/purpium.png"></span>
+            <span class="text">purpium</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/purpium.png"></span>
+            <span class="text">purpium</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/purpium.png"></span>
+            <span class="text">purpium</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/bubble rod.png"></span>
+            <span class="text">bubble rod</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/bubble rod.png"></span>
+            <span class="text">bubble rod</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+        </div>
+
+
+        <h2>Enchantments:</h2>
+        <p>There are a few enchantments that can be put on the scythe</p>
+        <ul>
+          <li><a href="/enchantments/eaw/disect/"> Disect</a></li>
+          <li><a href="/enchantments/eaw/pull/"> Pull</a></li>
+          <li><a href="/enchantments/eaw/stun/"> Stun</a></li>
+        </ul>
+
+
+
+    </div>
+  </div>
+</body>
+</html>

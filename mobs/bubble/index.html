@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BUBBLE | Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <script>
+      document.addEventListener('copy', function(e) {
+          const selectedText = window.getSelection().toString();
+
+          if (selectedText === 'Bubble') {
+              e.preventDefault();
+              e.clipboardData.setData('text/plain', 'BLEHH');
+          }
+      });
+    </script>
+    <h1>Bubble</h1>
+    <div class="box-content">
+        <h2>Summary:</h2>
+        <p>Silly particle monster thats a family of the blaze/breeze as a "water" mob</p>
+        <br>
+
+        <h2>Spawning:</h2>
+        <p>Bubble spawns in <a href="/structures/dungeon/"> the Dungeon</a> trough bubble spawners</p>
+
+        <h2>Attacks:</h2>
+        <p>She has multiple attacks</p>
+        <ul>
+          <li>Jump:</li>
+          <li class="explanation">Goes up and places water below and does a shock attack at once</li>
+          <li>Shock:</li>
+          <li class="explanation">Spawns a "shockwave" of water around her dealing damage</li>
+          <li>Spit:</li>
+          <li class="explanation">Shoots a small projectile forward that will place water if hitting wall and deals damage and goes away when hitting entitie</li>
+          <li>Hit:</li>
+          <li class="explanation">Hits the player like a zombie</li>
+        </ul>
+
+        <h2>Drops:</h2>
+        <p>After defeat she has a 1 in 3 chance it will drop a bubble rod</p>
+
+
+
+    </div>
+  </div>
+</body>
+</html>

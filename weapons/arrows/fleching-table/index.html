@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FLETCHING TABLE | Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <h1>Fletching Table</h1>
+    <div class="box-content">
+        <h2>Summary:</h2>
+        <p>WARNING: clicking the slot where the items show up in WILL result in items in the fletching table to dissapear THIS IS A BUG</p>
+        <p>New way to craft arrows and only way to get custom arrows</p>
+        <p>Normal place a fletching table to get interacable one, shift place it to get vanilla one (for vilagers)</p>
+        <br>
+
+        <h2>Recipies:</h2>
+        <p>Arrow</p>
+        <div class="crafting-grid-line">
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/flint.png"></span>
+            <span class="text">Flint</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/stick.png"></span>
+            <span class="text">Stick</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/feather.png"></span>
+            <span class="text">Feather</span>
+          </div>
+        </div>
+        <p>Tipped Arrow</p>
+        <div class="crafting-grid-line">
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/potion.png"></span>
+            <span class="text">Potion</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/arrow.png"></span>
+            <span class="text">Arrow</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+        </div>
+        <p>Spectral Arrow</p>
+        <div class="crafting-grid-line">
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/glowstone_dust.png"></span>
+            <span class="text">Glowstone</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/arrow.png"></span>
+            <span class="text">Arrow</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+        </div>
+        <p>Explosive Arrow</p>
+        <div class="crafting-grid-line">
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/gunpowder.png"></span>
+            <span class="text">Gunpowder</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/arrow.png"></span>
+            <span class="text">Arrow</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+        </div>
+        <p>Wind Arrow</p>
+        <div class="crafting-grid-line">
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/wind_charge.png"></span>
+            <span class="text">Wind Charge</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/arrow.png"></span>
+            <span class="text">Arrow</span>
+          </div>
+          <div class="slot">
+            <span class="icon"></span>
+            <span class="text"></span>
+          </div>
+        </div>
+        <p>Light Arrow</p>
+        <div class="crafting-grid-line">
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/gold_nugget.png"></span>
+            <span class="text">Golden Nugget</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/stick.png"></span>
+            <span class="text">Stick</span>
+          </div>
+          <div class="slot">
+            <span class="icon"><img src="/assets/images/feather.png"></span>
+            <span class="text">Feather</span>
+          </div>
+        </div>
+
+        <br>
+
+    </div>
+  </div>
+</body>
+</html>

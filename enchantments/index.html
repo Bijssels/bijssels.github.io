@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<script>
+    function loadScript(url) {
+      const script = document.createElement('script');
+      script.src = `${url}?v=${Date.now()}`;
+      script.defer = true; // optional
+      document.head.appendChild(script);
+    }
+
+    function loadCSS(url) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = `${url}?v=${Date.now()}`;
+      document.head.appendChild(link);
+    }
+
+    loadScript('/js/main.js');
+    loadCSS('/assets/styles/style.css');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENCHANTMENTS | Enchantments & Weapons</title>
+  <link rel="stylesheet" href="/assets/styles/style.css" />
+
+  <meta property="og:title" content="E&W">
+  <meta property="og:description" content="Enchantments And Weapons Documentation">
+  <meta property="og:url" content="https://bijssels.github.io">
+  <meta property="og:type" content="website">
+  <script src="/assets/files/emoji.js"></script>
+  <script src="/assets/files/scroll.js"></script>
+</head>
+<body>
+  <div class="box-outer">
+    <h1>Enchantments</h1>
+    <div class="box-content">
+        <h2>Summary:</h2>
+        <p>all enchantments that are changed or added</p>
+        <br>
+
+        <h2>Enchanted Vilager:</h2>
+        <p>If you craft Enchanted Lapis you can drop 5 of them on a lectern vilager and it will be enchanted</p>
+        <p>enchanted vilagers give higher trades and some trades you cant get via vilagers</p>
+
+        <h2>List:</h2>
+        <ul>
+          <h4>Vanilla</h4>
+          <li><a href="./vanilla/efficiency/">Efficiency</a></li>
+          <li><a href="./vanilla/frost-walker/">Frost Walker</a></li>
+          <li><a href="./vanilla/impaling/">Impaling</a></li>
+          <li><a href="./vanilla/knockback/">Knockback</a></li>
+          <li><a href="./vanilla/mending/">Mending</a></li>
+          <li><a href="./vanilla/multishot/">Multishot</a></li>
+          <li><a href="./vanilla/riptide/">Riptide</a></li>
+          <li><a href="./vanilla/sharpness/">Sharpness</a></li>
+          <li><a href="./vanilla/unbreaking/">Unbreaking</a></li>
+          <p></p>
+          <h4>Custom</h4>
+          <li><a href="./">COMMING SOON</a></li>
+        </ul>
+    </div>
+  </div>
+</body>
+</html>
